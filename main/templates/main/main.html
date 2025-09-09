@@ -7,19 +7,5 @@
     <h1>Selamat datang di {{ app_name }}!</h1>
     <p>Nama: {{ name }}</p>
     <p>Kelas: {{ class }}</p>
-
-    <h2>Daftar Produk:</h2>
-    <ul>
-        {% for product in products %}
-            <li>
-                <strong>{{ product.name }}</strong> - Rp{{ product.price }}<br>
-                {{ product.description }}<br>
-                <img src="{{ product.thumbnail }}" alt="{{ product.name }}" width="150"><br>
-                Kategori: {{ product.category }} | Unggulan: {{ product.is_featured }}
-            </li>
-        {% empty %}
-            <li>Belum ada produk.</li>
-        {% endfor %}
-    </ul>
 </body>
 </html>
